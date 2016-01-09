@@ -1,6 +1,6 @@
 module.exports = {
   "pronoun": [
-    { "en": "I", "es": "Yo", "fr": "Je" },
+    { "en": "I", "es": "yo", "fr": "je" },
     { "en": "you (informal)", "es": "tu", "fr": "tu" },
     { "en": "you (formal)", "es": "usted", "fr": "vous" },
     { "en": "he", "es": "el", "fr": "il" },
@@ -9,7 +9,7 @@ module.exports = {
 
   "verb": [
     {
-      "en": "am/are",
+      "en": "am/are/is",
       "es": {
         "I": "soy",
         "you (formal)": "es",

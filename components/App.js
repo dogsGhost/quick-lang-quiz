@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-import data from '../db.js';
+import phrases from './phrases.js';
 
 export default class App extends Component {
   render() {
@@ -17,4 +17,12 @@ export default class App extends Component {
   }
 }
 
-render(<App data={data} />, document.getElementById('app'));
+App.propTypes = {
+  data: React.PropTypes.array
+};
+
+App.defaultProps = {
+  data: []
+};
+
+render(<App data={phrases} />, document.getElementById('app'));
