@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import Question from 'Question';
 
 export default class List extends Component {
   render() {
@@ -17,4 +16,4 @@ export default class List extends Component {
       </ul>
     );
   }
-};
+}

@@ -7,4 +7,4 @@ export default class Question extends Component {
       </li>
     );
   }
-};
+}

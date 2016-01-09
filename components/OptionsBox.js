@@ -12,4 +12,4 @@ export default class OptionsBox extends Component {
       </div>
     );
   }
-};
+}

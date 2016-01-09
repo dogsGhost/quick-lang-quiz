@@ -15,6 +15,6 @@ export default class App extends Component {
       </div>
     );
   }
-};
+}
 
 render(<App data={data} />, document.getElementById('app'));

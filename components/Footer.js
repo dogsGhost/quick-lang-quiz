@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-export default Footer = () => (
+const Footer = () => (
   <footer className="main-footer">
     <small>{ new Date().getFullYear() }</small>
   </footer>
 );
 
-// export default Footer;
+export default Footer;
