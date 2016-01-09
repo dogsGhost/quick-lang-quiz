@@ -21,3 +21,11 @@ export default class List extends Component {
     );
   }
 }
+
+List.propTypes = {
+  data: React.PropTypes.array
+};
+
+List.defaultProps = {
+  data: []
+};

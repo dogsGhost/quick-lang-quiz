@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-import phrases from './phrases.js';
+import phrases from '../phrases.js';
 
 export default class App extends Component {
   render() {

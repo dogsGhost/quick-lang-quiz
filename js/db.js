@@ -1,4 +1,6 @@
-module.exports = {
+/* eslint quotes: [2, "double"] */
+
+const db = {
   "pronoun": [
     { "en": "I", "es": "yo", "fr": "je" },
     { "en": "you (informal)", "es": "tu", "fr": "tu" },
@@ -59,3 +61,5 @@ module.exports = {
     { "en": "woman", "es": "mujer", "gender": 0 }
   ]
 };
+
+export default db;

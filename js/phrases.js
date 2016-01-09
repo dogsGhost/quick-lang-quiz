@@ -1,4 +1,4 @@
-import db from '../db.js';
+import db from './db';
 import { sample, filter, random } from 'lodash';
 
 const phrases = [];

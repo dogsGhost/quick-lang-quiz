@@ -25,6 +25,7 @@
     "no-floating-decimal": 2,
     "no-loop-func": 2,
     "no-magic-numbers": 1,
+    "no-multiple-empty-lines": 2,
     "no-new-wrappers": 2,
     "no-trailing-spaces": [2, { "skipBlankLines": false }],
     "no-unexpected-multiline": 2,
