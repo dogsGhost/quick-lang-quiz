@@ -1,13 +1,8 @@
 import React, {Component} from 'react';
+import {clean, capitalize} from '../utils';
 
 const ENTER_KEYCODE = 13;
-const LAST_POS = -1;
 const PERCENT_MULTIPLE = 100;
-const clean = (string) => {
-  // Remove whitespace/possible trailing period and make all letters lowercase
-  return string.trim().charAt(LAST_POS) === '.' ?
-    string.trim().toLowerCase().slice(0, LAST_POS) : string.trim().toLowerCase();
-};
 
 export default class List extends Component {
   constructor() {
@@ -37,6 +32,7 @@ export default class List extends Component {
         });
         // clear input field
         e.target.value = '';
+
       } else {
         // TODO: grade the quiz
       }
@@ -44,7 +40,6 @@ export default class List extends Component {
   }
 
   render() {
-    const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
     let w = {
       width: `${(this.state.curIndex / this.props.data.length * PERCENT_MULTIPLE)}%`
     };
