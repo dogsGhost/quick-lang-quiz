@@ -19,6 +19,10 @@ ul, ol {
   list-style: none;
 }
 
+p {
+  padding: 0 0 0 .5em;
+}
+
 .main-container {
   margin: 0 auto;
   width: 96%;
@@ -40,38 +44,50 @@ ul, ol {
   border-top: 1px solid #222;
 }
 
-.question-list {
-  padding: 0;
-  background: #a7d5ea;
-}
-
-.question {
+.quiz {
   position: relative;
   padding: 2em 3em 3em;
-  border-top: 1px solid #4a9ec4;
+  background: #a7d5ea;
+  /*border-top: 1px solid #4a9ec4;*/
 }
 
-.question-number {
+.quiz-number {
   position: absolute;
   top: 0;
   left: 0;
-  padding: .25em .5em;
-  font-size: 75%;
+  height: 2em;
+  width: 2em;
+  font-size: 80%;
+  line-height: 2;
+  text-align: center;
   border: 1px solid #4a9ec4;
   border-top: none;
+  border-left: none;
 }
 
-.question-text {
+.quiz-text {
   margin: 0 0 1em;
   display: block;
   font-size: 1.2em;
 }
 
-.question-input {
+.quiz-input {
   display: block;
   height: 2em;
   width: 100%;
   padding: .5em;
   font-size: 1.25em;
   border: 2px solid #858585;
+}
+
+.progress-container {
+  /*margin: 0 0 .25em;*/
+  height: .25em;
+  background: #a1a1a1;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #e77;
+  transition: all .3s ease-out;
 }
