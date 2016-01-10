@@ -8,7 +8,10 @@
     "browser": true,
     "node": true
   },
-  "globals": {},
+  "globals": {
+    "describe": true,
+    "it": true
+  },
   "plugins": [
     "react"
   ],
