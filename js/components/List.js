@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {clean, capitalize} from '../utils';
+import utils from '../utils';
 
 const ENTER_KEYCODE = 13;
 const PERCENT_MULTIPLE = 100;
@@ -19,7 +19,7 @@ export default class List extends Component {
       // store the user's input
       this.setState({
         answers: this.state.answers.concat([{
-          input_val: clean(e.target.value),
+          input_val: utils.clean(e.target.value),
           correct_val: this.props.data[this.state.curIndex].es_phrase
         }])
       });
@@ -40,29 +40,47 @@ export default class List extends Component {
   }
 
   render() {
-    let w = {
-      width: `${(this.state.curIndex / this.props.data.length * PERCENT_MULTIPLE)}%`
+    let progressStyles = {
+      width:
+        `${(this.state.curIndex / this.props.data.length * PERCENT_MULTIPLE)}%`
     };
 
     if (this.curIndex + 1 === this.props.data.length) {
+      let answerNodes = this.state.answers.map((answer, index) => {
+        return (
+          <div>
+            Phrase {index + 1}: {this.props.data[index].en_phrase}<br />
+            Your answer: {answer.input_val}<br />
+            Correct answer: {answer.correct_val}
+          </div>
+        );
+      });
       return (
-        <Answers />
+        <div>
+          <div className="quiz-score">
+            You
+          </div>
+          {answerNodes}
+        </div>
       );
     }
 
     return (
       <div>
         <div className="progress-container">
-          <div className="progress-bar" style={w}></div>
+          <div className="progress-bar" style={progressStyles}></div>
         </div>
         <div className="quiz">
           <span className="quiz-number">
             {this.state.curIndex + 1}
           </span>
           <span className="quiz-text">
-            {capitalize(this.props.data[this.state.curIndex].en_phrase)}.
+            {utils.capitalize(this.props.data[this.state.curIndex].en_phrase)}.
           </span>
-          <input type="text" className="quiz-input" onKeyDown={this.handleKeyDown.bind(this)} />
+          <input
+            type="text"
+            className="quiz-input"
+            onKeyDown={this.handleKeyDown.bind(this)} />
         </div>
       </div>
     );
