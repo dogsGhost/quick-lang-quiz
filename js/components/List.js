@@ -65,7 +65,7 @@ export default class List extends Component {
             {this.state.curIndex + 1}
           </span>
           <span className="quiz-text">
-            { capitalize(this.props.data[this.state.curIndex].en_phrase) }.
+            {capitalize(this.props.data[this.state.curIndex].en_phrase)}.
           </span>
           <input type="text" className="quiz-input" onKeyDown={this.handleKeyDown.bind(this)} />
         </div>
