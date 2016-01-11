@@ -48,7 +48,6 @@ p {
   position: relative;
   padding: 2em 3em 3em;
   background: #a7d5ea;
-  /*border-top: 1px solid #4a9ec4;*/
 }
 
 .quiz-number {
@@ -81,7 +80,6 @@ p {
 }
 
 .progress-container {
-  /*margin: 0 0 .25em;*/
   height: .25em;
   background: #a1a1a1;
 }
@@ -90,4 +88,33 @@ p {
   height: 100%;
   background: #e77;
   transition: all .3s ease-out;
+}
+
+.quiz-score {
+  font-size: 1.2em;
+}
+
+.answer-list {
+  padding: 0;
+}
+
+.answer-item {
+  margin: 0 0 .25em;
+  padding: 1.5em 2em 2em;
+  border-top: 2px solid #fff;
+}
+
+.answer-line {
+  margin: .25em;
+  display: block;
+}
+
+.correct {
+  background: #B6EFBB;
+  border-top-color: #3caa46;
+}
+
+.incorrect {
+  background: #ffc0c0;
+  border-top-color: #ff6363;
 }
