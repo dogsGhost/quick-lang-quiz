@@ -3,8 +3,10 @@ import utils from '../js/utils';
 
 describe('utils.clean', () => {
   it('should trim whitespace', () => {
-    expect(utils.clean('   string with whitespace    ')).toBe('string with whitespace');
-    expect(utils.clean('string with whitespace')).toBe('string with whitespace');
+    expect(utils.clean('   string with whitespace    '))
+      .toBe('string with whitespace');
+    expect(utils.clean('string with whitespace'))
+      .toBe('string with whitespace');
   });
 
   it('should make all characters lowercase', () => {
