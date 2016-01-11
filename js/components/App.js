@@ -17,12 +17,4 @@ export default class App extends Component {
   }
 }
 
-App.propTypes = {
-  data: React.PropTypes.array
-};
-
-App.defaultProps = {
-  data: []
-};
-
 render(<App data={phrases} />, document.getElementById('app'));

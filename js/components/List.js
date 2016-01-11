@@ -1,13 +1,8 @@
 import React, {Component} from 'react';
+import utils from '../utils';
 
 const ENTER_KEYCODE = 13;
-const LAST_POS = -1;
 const PERCENT_MULTIPLE = 100;
-const clean = (string) => {
-  // Remove whitespace/possible trailing period and make all letters lowercase
-  return string.trim().charAt(LAST_POS) === '.' ?
-    string.trim().toLowerCase().slice(0, LAST_POS) : string.trim().toLowerCase();
-};
 
 export default class List extends Component {
   constructor() {
@@ -21,53 +16,91 @@ export default class List extends Component {
   // show the next phrase
   handleKeyDown(e) {
     if (e.keyCode === ENTER_KEYCODE) {
+      let inputValue = utils.clean(e.target.value);
+      let correctAnswer = this.props.data[this.state.curIndex].es_phrase;
+
       // store the user's input
       this.setState({
         answers: this.state.answers.concat([{
-          input_val: clean(e.target.value),
-          correct_val: this.props.data[this.state.curIndex].es_phrase
+          inputValue,
+          isCorrect: inputValue === correctAnswer ? true : false
         }])
       });
 
-      // check if they've answered the last question
+      // move to next question
       if (this.state.curIndex < this.props.data.length) {
-        // move to next question
         this.setState({
           curIndex: this.state.curIndex + 1
         });
+
         // clear input field
         e.target.value = '';
-      } else {
-        // TODO: grade the quiz
       }
     }
   }
 
   render() {
-    const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
-    let w = {
-      width: `${(this.state.curIndex / this.props.data.length * PERCENT_MULTIPLE)}%`
+    let data = this.props.data;
+    let dataLen = data.length;
+    let progressStyles = {
+      width: `${(this.state.curIndex / dataLen * PERCENT_MULTIPLE)}%`
     };
 
-    if (this.curIndex + 1 === this.props.data.length) {
+    // If the last question has been answered.
+    if (this.state.curIndex === dataLen) {
+      // Calculate how many of the answer are correct.
+      let getNumCorrect = () => {
+        return this.state.answers.filter((answer) => {
+          return (answer.isCorrect);
+        }).length;
+      };
+      let answerNodes = this.state.answers.map((answer, index) => {
+        return (
+          <li
+            key={index}
+            className={`answer-item ${answer.isCorrect ? 'correct' : 'incorrect'}`}>
+              <span className="answer-line">
+                Phrase {index + 1}: {data[index].en_phrase}
+              </span>
+              <span className="answer-line">
+                Your answer: {answer.inputValue}
+              </span>
+              <span className="answer-line">
+                Correct answer: {data[index].es_phrase}
+              </span>
+          </li>
+        );
+      });
+
       return (
-        <Answers />
+        <div>
+          <p className="quiz-score">
+            You scored {(getNumCorrect() / dataLen * PERCENT_MULTIPLE)}%
+             ({getNumCorrect()} out of {dataLen}).
+          </p>
+          <ol className="answer-list">
+            {answerNodes}
+          </ol>
+        </div>
       );
     }
 
     return (
       <div>
         <div className="progress-container">
-          <div className="progress-bar" style={w}></div>
+          <div className="progress-bar" style={progressStyles}></div>
         </div>
         <div className="quiz">
           <span className="quiz-number">
             {this.state.curIndex + 1}
           </span>
           <span className="quiz-text">
-            { capitalize(this.props.data[this.state.curIndex].en_phrase) }.
+            {utils.capitalize(data[this.state.curIndex].en_phrase)}.
           </span>
-          <input type="text" className="quiz-input" onKeyDown={this.handleKeyDown.bind(this)} />
+          <input
+            type="text"
+            className="quiz-input"
+            onKeyDown={this.handleKeyDown.bind(this)} />
         </div>
       </div>
     );
