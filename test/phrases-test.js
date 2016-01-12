@@ -50,26 +50,30 @@ describe('_p', () => {
     it('should have a gender property that matches the passed param', () => {
       det = _p.getDeterminer(0, src);
       let num = 1;
-      num = det ? det.gender : 0;
-
+      if (det) {
+        num = det.gender;
+      }
       expect(num).toBe(0);
     });
   });
 
   describe('getPhrase', () => {
     let obj = _p.getPhrase(db);
+    let correctLen = () => {
+      return obj.english.split(' ').length;
+    };
 
     it('should return an object', () => {
       expect(Object.keys(obj).length).toExist();
     });
 
-    it('should have a prop that is a string of 3 or 4 words', () => {
-      let correctLen = (() => {
-        obj = obj.english.split(' ').length;
-        return (obj === 3 || obj === 4) ? true : false;
-      })();
+    it('should have a prop that is a string of at least 3 words', () => {
+      expect(correctLen() >= 3).toExist();
 
-      expect(correctLen).toExist();
+    });
+
+    it('should have a prop that is a string of at most 4 words', () => {
+      expect(correctLen() <= 4).toExist();
     });
   });
 });
