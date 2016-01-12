@@ -54,6 +54,7 @@ export default class List extends Component {
           return (answer.isCorrect);
         }).length;
       };
+      let percentage = Math.round(getNumCorrect() / dataLen * PERCENT_MULTIPLE);
       let answerNodes = this.state.answers.map((answer, index) => {
         return (
           <li
@@ -75,7 +76,7 @@ export default class List extends Component {
       return (
         <div>
           <p className="quiz-score">
-            You scored {(getNumCorrect() / dataLen * PERCENT_MULTIPLE)}%
+            You scored {percentage}%
              ({getNumCorrect()} out of {dataLen}).
           </p>
           <ol className="answer-list">
