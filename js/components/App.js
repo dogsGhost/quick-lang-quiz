@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {render} from 'react-dom';
 import Header from './Header';
 import Main from './Main';
@@ -12,16 +12,12 @@ const quizData = getPhrases({
   src: db
 });
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <Main data={this.props.data} />
-        <Footer />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <Header />
+    <Main data={quizData} />
+    <Footer />
+  </div>
+);
 
-render(<App data={quizData} />, document.getElementById('app'));
+render(<App />, document.getElementById('app'));
