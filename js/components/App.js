@@ -3,7 +3,14 @@ import {render} from 'react-dom';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-import phrases from '../phrases.js';
+import getPhrases from './../phrases';
+import db from './../db';
+
+const quizData = getPhrases({
+  lang: 'es',
+  count: 10,
+  src: db
+});
 
 export default class App extends Component {
   render() {
@@ -17,4 +24,4 @@ export default class App extends Component {
   }
 }
 
-render(<App data={phrases} />, document.getElementById('app'));
+render(<App data={quizData} />, document.getElementById('app'));
