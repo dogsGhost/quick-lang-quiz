@@ -50,9 +50,8 @@ describe('_p', () => {
     it('should have a gender property that matches the passed param', () => {
       det = _p.getDeterminer(0, src);
       let num = 1;
-      if (det) {
-        num = det.gender;
-      }
+      num = det ? det.gender : 0;
+
       expect(num).toBe(0);
     });
   });
