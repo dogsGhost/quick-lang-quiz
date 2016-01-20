@@ -14,6 +14,12 @@ module.exports = {
         loaders: ['style', 'css', 'sass']
       },
 
+      // compile sass from source
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css']
+      },
+
       {
         test: /\.js$/,
         loader: 'babel-loader',

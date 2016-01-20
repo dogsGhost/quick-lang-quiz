@@ -16,7 +16,7 @@ export default class Main extends Component {
     };
   }
 
-  handleChange(e) {
+  _handleChange(e) {
     this.setState({
       count: Math.floor(Number(e.value)) || DEFAULT_COUNT
     });
@@ -34,7 +34,7 @@ export default class Main extends Component {
                 type="text"
                 value={this.state.count}
                 placeholder={this.state.count}
-                onChange={this.handleChange.bind(this)} />
+                onChange={this._handleChange.bind(this)} />
           }
           phrases from English into Spanish. Character accents not required.
         </p>
