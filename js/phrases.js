@@ -4,12 +4,13 @@ const DEFAULT_COUNT = 10;
 
 export const _p = {
   getDeterminer(gender, src) {
+    // NOTE: change disables so 100% determiner
     // 1 in 3 chance to add a determiner.
-    if (!utils.random(2)) {
+    // if (!utils.random(2)) {
       // Select a random determiner that matches the gender of the noun.
-      return utils.sample(src.determiner.filter((i) => gender === i.gender));
-    }
-    return false;
+    return utils.sample(src.determiner.filter((i) => gender === i.gender));
+    // }
+    // return false;
   },
 
   // Wrapper for utils.sample lets us test word objects specifically.

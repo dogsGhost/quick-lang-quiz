@@ -20,6 +20,12 @@ module.exports = {
         loaders: ['style', 'css']
       },
 
+      // json
+      {
+        test: /\.json$/,
+        loaders: ['json-loader']
+      },
+
       {
         test: /\.js$/,
         loader: 'babel-loader',
