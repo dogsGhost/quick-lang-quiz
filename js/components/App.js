@@ -1,20 +1,18 @@
-import React, {Component} from 'react';
+import 'normalize.css';
+import './../../css/style.scss';
+import React from 'react';
 import {render} from 'react-dom';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-import phrases from '../phrases.js';
+import db from './../../db.json';
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <Main data={this.props.data} />
-        <Footer />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <Header />
+    <Main src={db} />
+    <Footer />
+  </div>
+);
 
-render(<App data={phrases} />, document.getElementById('app'));
+render(<App />, document.getElementById('app'));

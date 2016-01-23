@@ -1,7 +1,7 @@
 Quick Language Quiz
 ===
 
-Quiz for translating phrases from English into Spanish. Built with React.
+Quiz for translating phrases from English into Spanish. Emphasis on vocabulary over sentence logic. Built with React.
 
 Dev Commands
 ---

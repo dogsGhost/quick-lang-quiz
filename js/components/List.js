@@ -17,7 +17,7 @@ export default class List extends Component {
   handleKeyDown(e) {
     if (e.keyCode === ENTER_KEYCODE) {
       let inputValue = utils.clean(e.target.value);
-      let correctAnswer = this.props.data[this.state.curIndex].es_phrase;
+      let correctAnswer = this.props.data[this.state.curIndex].translation;
 
       // store the user's input
       this.setState({
@@ -54,19 +54,20 @@ export default class List extends Component {
           return (answer.isCorrect);
         }).length;
       };
+      let percentage = Math.round(getNumCorrect() / dataLen * PERCENT_MULTIPLE);
       let answerNodes = this.state.answers.map((answer, index) => {
         return (
           <li
             key={index}
             className={`answer-item ${answer.isCorrect ? 'correct' : 'incorrect'}`}>
               <span className="answer-line">
-                Phrase {index + 1}: {data[index].en_phrase}
+                Phrase {index + 1}: {data[index].english}
               </span>
               <span className="answer-line">
                 Your answer: {answer.inputValue}
               </span>
               <span className="answer-line">
-                Correct answer: {data[index].es_phrase}
+                Correct answer: {data[index].translation}
               </span>
           </li>
         );
@@ -75,7 +76,7 @@ export default class List extends Component {
       return (
         <div>
           <p className="quiz-score">
-            You scored {(getNumCorrect() / dataLen * PERCENT_MULTIPLE)}%
+            You scored {percentage}%
              ({getNumCorrect()} out of {dataLen}).
           </p>
           <ol className="answer-list">
@@ -95,7 +96,7 @@ export default class List extends Component {
             {this.state.curIndex + 1}
           </span>
           <span className="quiz-text">
-            {utils.capitalize(data[this.state.curIndex].en_phrase)}.
+            {utils.capitalize(data[this.state.curIndex].english)}.
           </span>
           <input
             type="text"

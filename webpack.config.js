@@ -1,12 +1,31 @@
 module.exports = {
   entry: './js/components/App.js',
+
   output: {
-  	path: './public',
+    path: './public',
     filename: 'bundle.js'
   },
+
   module: {
     loaders: [
-      { test: /\.css$/, loader: "style!css" },
+      // compile sass from source
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
+      },
+
+      // compile sass from source
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css']
+      },
+
+      // json
+      {
+        test: /\.json$/,
+        loaders: ['json-loader']
+      },
+
       {
         test: /\.js$/,
         loader: 'babel-loader',
