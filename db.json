@@ -2,8 +2,8 @@
   "pronoun": [
     {
       "en": "I",
-      "es": "Yo",
-      "fr": "Je"
+      "es": "yo",
+      "fr": "je"
     },
     {
       "en": "you (informal)",
@@ -102,18 +102,18 @@
       "en": "see(s)",
       "es": {
         "I": "veo",
-        "you (formal)": "ves",
-        "you (informal)": "ve",
+        "you (formal)": "ve",
+        "you (informal)": "ves",
         "he": "ve",
         "she": "ve"
       }
     },
     {
-      "en": "have(s)",
+      "en": "have/has",
       "es": {
         "I": "tengo",
-        "you (formal)": "tienes",
-        "you (informal)": "tiene",
+        "you (formal)": "tiene",
+        "you (informal)": "tienes",
         "he": "tiene",
         "she": "tiene"
       }
@@ -122,8 +122,8 @@
       "en": "want(s)",
       "es": {
         "I": "queiro",
-        "you (formal)": "queires",
-        "you (informal)": "queire",
+        "you (formal)": "queire",
+        "you (informal)": "queires",
         "he": "queire",
         "she": "queire"
       }
@@ -132,8 +132,8 @@
       "en": "pay(s)",
       "es": {
         "I": "pago",
-        "you (formal)": "pagas",
-        "you (informal)": "paga",
+        "you (formal)": "paga",
+        "you (informal)": "pagas",
         "he": "paga",
         "she": "paga"
       }
@@ -142,8 +142,8 @@
       "en": "touch(es)",
       "es": {
         "I": "toco",
-        "you (formal)": "tocas",
-        "you (informal)": "toca",
+        "you (formal)": "toca",
+        "you (informal)": "tocas",
         "he": "toca",
         "she": "toca"
       }
@@ -152,8 +152,8 @@
       "en": "make(s)",
       "es": {
         "I": "hago",
-        "you (formal)": "haces",
-        "you (informal)": "haca",
+        "you (formal)": "hace",
+        "you (informal)": "hacas",
         "he": "haca",
         "she": "haca"
       }
@@ -161,7 +161,7 @@
   ],
   "determiner": [
     {
-      "en": "a/an",
+      "en": "a",
       "es": "un",
       "fr": "un",
       "gender": 1
@@ -194,9 +194,9 @@
     },
     {
       "en": "water",
-      "es": "aqua",
+      "es": "agua",
       "fr": "eau",
-      "gender": 1
+      "gender": 0
     },
     {
       "en": "milk",
