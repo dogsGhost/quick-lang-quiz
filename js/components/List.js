@@ -115,7 +115,7 @@ export default class List extends Component {
             ref="answerInput"
             type="text" />
             <input
-              className="quiz-btn"
+              className="btn quiz-btn"
               type="submit"
               value={
                 this.state.curIndex === this.props.data.length - 1 ?

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import QuizSetup from './QuizSetup';
 import List from './List';
 import getPhrases from './../phrases';
 
@@ -9,17 +8,10 @@ export default class Main extends Component {
   constructor() {
     super();
     this.state = {
-      // TODO: Change to false to build out quiz options.
-      quizStarted: true,
+      count: DEFAULT_COUNT,
       lang: 'es',
-      count: DEFAULT_COUNT
+      quizStarted: false
     };
-  }
-
-  _handleChange(e) {
-    this.setState({
-      count: Math.floor(Number(e.value)) || DEFAULT_COUNT
-    });
   }
 
   render() {
@@ -31,12 +23,16 @@ export default class Main extends Component {
             this.state.quizStarted ?
               <span> {this.state.count} </span> :
                <input
-                type="text"
-                value={this.state.count}
-                placeholder={this.state.count}
-                onChange={this._handleChange.bind(this)} />
+               className="instructions-count"
+                onChange={(e) => this.setState({
+                  count: Math.floor(Number(e.target.value)) || DEFAULT_COUNT
+                })}
+                type="number"
+                value={this.state.count} />
           }
-          phrases from English to Spanish. Do not use character accents.
+          phrases from English to Spanish.
+          Do not use character accents.
+          Dropped pronouns are optional.
         </p>
         {
           this.state.quizStarted ?
@@ -45,7 +41,12 @@ export default class Main extends Component {
               count: this.state.count,
               src: this.props.src
             })} /> :
-            <QuizSetup />
+            <button
+              className="btn"
+              onClick={() => this.setState({ quizStarted: true })}
+              type="button">
+                Start
+            </button>
         }
       </main>
     );
