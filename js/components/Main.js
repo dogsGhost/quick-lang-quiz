@@ -36,7 +36,7 @@ export default class Main extends Component {
                 placeholder={this.state.count}
                 onChange={this._handleChange.bind(this)} />
           }
-          phrases from English into Spanish. Character accents not required.
+          phrases from English to Spanish. Do not use character accents.
         </p>
         {
           this.state.quizStarted ?

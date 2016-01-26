@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import utils from '../utils';
 
-const ENTER_KEYCODE = 13;
 const PERCENT_MULTIPLE = 100;
 
 export default class List extends Component {
@@ -14,16 +13,29 @@ export default class List extends Component {
   }
 
   // show the next phrase
-  handleKeyDown(e) {
-    if (e.keyCode === ENTER_KEYCODE) {
-      let inputValue = utils.clean(e.target.value);
-      let correctAnswer = this.props.data[this.state.curIndex].translation;
+  _handleSubmit(e) {
+    e.preventDefault();
 
-      // store the user's input
+    let input = this.refs.answerInput;
+    let inputValue = utils.clean(input.value);
+    let correctAnswer = this.props.data[this.state.curIndex].translation;
+
+    // store the user's input
+    if (inputValue) {
+      // Check for exact match
+      let isCorrect = inputValue === correctAnswer ? true : false;
+
+      // Check for dropped pronoun
+      if (!isCorrect) {
+        correctAnswer = correctAnswer.split(' ').slice(1).join(' ');
+        isCorrect = inputValue === correctAnswer ? true : false;
+      }
+
+      // save values
       this.setState({
         answers: this.state.answers.concat([{
           inputValue,
-          isCorrect: inputValue === correctAnswer ? true : false
+          isCorrect: isCorrect
         }])
       });
 
@@ -34,7 +46,7 @@ export default class List extends Component {
         });
 
         // clear input field
-        e.target.value = '';
+        input.value = '';
       }
     }
   }
@@ -91,7 +103,7 @@ export default class List extends Component {
         <div className="progress-container">
           <div className="progress-bar" style={progressStyles}></div>
         </div>
-        <div className="quiz">
+        <form className="quiz" onSubmit={this._handleSubmit.bind(this)}>
           <span className="quiz-number">
             {this.state.curIndex + 1}
           </span>
@@ -99,10 +111,18 @@ export default class List extends Component {
             {utils.capitalize(data[this.state.curIndex].english)}.
           </span>
           <input
-            type="text"
             className="quiz-input"
-            onKeyDown={this.handleKeyDown.bind(this)} />
-        </div>
+            ref="answerInput"
+            type="text" />
+            <input
+              className="quiz-btn"
+              type="submit"
+              value={
+                this.state.curIndex === this.props.data.length - 1 ?
+                  'Done' :
+                  'Next'
+              } />
+        </form>
       </div>
     );
   }
