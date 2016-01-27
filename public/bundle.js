@@ -64,11 +64,11 @@
 
 	var _Main2 = _interopRequireDefault(_Main);
 
-	var _Footer = __webpack_require__(171);
+	var _Footer = __webpack_require__(170);
 
 	var _Footer2 = _interopRequireDefault(_Footer);
 
-	var _db = __webpack_require__(172);
+	var _db = __webpack_require__(171);
 
 	var _db2 = _interopRequireDefault(_db);
 
@@ -471,7 +471,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  font: 1em/1.3 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #222; }\n\nh1, h2, h3, h4, p, ul, ol {\n  margin: 0 0 1em; }\n\nh1 {\n  margin: 0;\n  font-size: 1.5em;\n  line-height: 1;\n  font-weight: normal; }\n\nul, ol {\n  padding: 0 0 0 1.5em;\n  list-style: none; }\n\np {\n  padding: 0 0 0 .5em; }\n\n.main-container {\n  margin: 0 auto;\n  width: 96%;\n  max-width: 660px; }\n\n.main-header {\n  padding: 2em 1em 1.5em;\n  color: #fff;\n  background: #222; }\n\n.main-content {\n  padding: 1em; }\n\n.main-footer {\n  padding: 1em 1.5em;\n  border-top: 1px solid #222; }\n\n.quiz {\n  background: #a1d5ec;\n  position: relative;\n  padding: 2em 3em 3em; }\n  .quiz-number {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 2em;\n    width: 2em;\n    font-size: 80%;\n    line-height: 2;\n    text-align: center;\n    border: 1px solid #3583a6;\n    border-top: none;\n    border-left: none; }\n  .quiz-text {\n    margin: 0 0 1em;\n    display: block;\n    font-size: 1.2em; }\n  .quiz-input {\n    display: block;\n    height: 2em;\n    width: 100%;\n    padding: .5em;\n    font-size: 1.25em;\n    border: 2px solid #858585; }\n  .quiz-score {\n    font-size: 1.2em; }\n\n.progress-container {\n  height: .25em;\n  background: #a1a1a1; }\n\n.progress-bar {\n  height: 100%;\n  background: #e77;\n  transition: all .3s ease-out; }\n\n.answer-list {\n  padding: 0; }\n\n.answer-item {\n  margin: 0 0 .25em;\n  padding: 1.5em 2em 2em;\n  border-top: .25em solid #fff; }\n\n.answer-line {\n  margin: .25em;\n  display: block; }\n\n.correct {\n  background: #8ef1b7;\n  border-top-color: #26A65B; }\n\n.incorrect {\n  background: #fad1d0;\n  border-top-color: #D64541; }\n", ""]);
+	exports.push([module.id, "body {\n  font: 1em/1.3 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #222; }\n\nh1, h2, h3, h4, p, ul, ol {\n  margin: 0 0 1em; }\n\nh1 {\n  margin: 0;\n  font-size: 1.5em;\n  line-height: 1;\n  font-weight: normal; }\n\nul, ol {\n  padding: 0 0 0 1.5em;\n  list-style: none; }\n\np {\n  padding: 0 0 0 .5em; }\n\n.btn {\n  padding: 0 1.25em;\n  height: 2.5em;\n  line-height: 2;\n  color: #fff;\n  background: #3583a6;\n  border: none;\n  border-radius: .5em; }\n\n.main-container {\n  margin: 0 auto;\n  width: 96%;\n  max-width: 660px; }\n\n.main-header {\n  padding: 2em 1em 1.5em;\n  color: #fff;\n  background: #222; }\n\n.main-content {\n  padding: 1em; }\n\n.main-footer {\n  padding: 1em 1.5em;\n  border-top: 1px solid #222; }\n\n.instructions-count {\n  margin: 0 0.5em;\n  padding: 0.25em 0;\n  width: 3em;\n  text-align: center;\n  border: 2px solid #3583a6; }\n\n.quiz {\n  background: #a1d5ec;\n  position: relative;\n  padding: 2em 3em 3em; }\n  .quiz-number {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 2em;\n    width: 2em;\n    font-size: 80%;\n    line-height: 2;\n    text-align: center;\n    border: 1px solid #3583a6;\n    border-top: none;\n    border-left: none; }\n  .quiz-text {\n    margin: 0 0 1em;\n    display: block;\n    font-size: 1.2em; }\n  .quiz-input {\n    display: block;\n    margin: 0 0 1em;\n    height: 2em;\n    width: 100%;\n    padding: .5em;\n    font-size: 1.25em;\n    border: 2px solid #858585; }\n  .quiz-score {\n    font-size: 1.2em; }\n\n.progress-container {\n  height: .25em;\n  background: #a1a1a1; }\n\n.progress-bar {\n  height: 100%;\n  background: #e77;\n  transition: all .3s ease-out; }\n\n.answer-list {\n  padding: 0; }\n\n.answer-item {\n  margin: 0 0 .25em;\n  padding: 1.5em 2em 2em;\n  border-top: .25em solid #fff; }\n\n.answer-line {\n  margin: .25em;\n  display: block; }\n\n.correct {\n  background: #8ef1b7;\n  border-top-color: #26A65B; }\n\n.incorrect {\n  background: #fad1d0;\n  border-top-color: #D64541; }\n", ""]);
 
 	// exports
 
@@ -20117,15 +20117,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _QuizSetup = __webpack_require__(167);
-
-	var _QuizSetup2 = _interopRequireDefault(_QuizSetup);
-
-	var _List = __webpack_require__(168);
+	var _List = __webpack_require__(167);
 
 	var _List2 = _interopRequireDefault(_List);
 
-	var _phrases = __webpack_require__(170);
+	var _phrases = __webpack_require__(169);
 
 	var _phrases2 = _interopRequireDefault(_phrases);
 
@@ -20148,24 +20144,18 @@
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Main).call(this));
 
 	    _this.state = {
-	      // TODO: Change to false to build out quiz options.
-	      quizStarted: true,
+	      count: DEFAULT_COUNT,
 	      lang: 'es',
-	      count: DEFAULT_COUNT
+	      quizStarted: false
 	    };
 	    return _this;
 	  }
 
 	  _createClass(Main, [{
-	    key: '_handleChange',
-	    value: function _handleChange(e) {
-	      this.setState({
-	        count: Math.floor(Number(e.value)) || DEFAULT_COUNT
-	      });
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _this2 = this;
+
 	      return _react2.default.createElement(
 	        'main',
 	        { className: 'main-content' },
@@ -20180,17 +20170,30 @@
 	            this.state.count,
 	            ' '
 	          ) : _react2.default.createElement('input', {
-	            type: 'text',
-	            value: this.state.count,
-	            placeholder: this.state.count,
-	            onChange: this._handleChange.bind(this) }),
-	          'phrases from English into Spanish. Character accents not required.'
+	            className: 'instructions-count',
+	            onChange: function onChange(e) {
+	              return _this2.setState({
+	                count: Math.floor(Number(e.target.value)) || DEFAULT_COUNT
+	              });
+	            },
+	            type: 'number',
+	            value: this.state.count }),
+	          'phrases from English to Spanish. Do not use character accents. Dropped pronouns are optional.'
 	        ),
 	        this.state.quizStarted ? _react2.default.createElement(_List2.default, { data: (0, _phrases2.default)({
 	            lang: this.state.lang,
 	            count: this.state.count,
 	            src: this.props.src
-	          }) }) : _react2.default.createElement(_QuizSetup2.default, null)
+	          }) }) : _react2.default.createElement(
+	          'button',
+	          {
+	            className: 'btn',
+	            onClick: function onClick() {
+	              return _this2.setState({ quizStarted: true });
+	            },
+	            type: 'button' },
+	          'Start'
+	        )
 	      );
 	    }
 	  }]);
@@ -20208,44 +20211,6 @@
 /* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(7);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var QuizSetup = function QuizSetup() {
-	  return _react2.default.createElement(
-	    "div",
-	    null,
-	    _react2.default.createElement(
-	      "p",
-	      null,
-	      "Which language would you like to be quizzed on?"
-	    ),
-	    _react2.default.createElement(
-	      "div",
-	      null,
-	      _react2.default.createElement("input", { type: "radio", name: "lang", value: "es", defaultChecked: true }),
-	      " Spanish",
-	      _react2.default.createElement("input", { type: "radio", name: "lang", value: "fr" }),
-	      " French"
-	    )
-	  );
-	};
-
-	exports.default = QuizSetup;
-
-/***/ },
-/* 168 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -20258,7 +20223,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utils = __webpack_require__(169);
+	var _utils = __webpack_require__(168);
 
 	var _utils2 = _interopRequireDefault(_utils);
 
@@ -20270,7 +20235,6 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var ENTER_KEYCODE = 13;
 	var PERCENT_MULTIPLE = 100;
 
 	var List = function (_Component) {
@@ -20291,17 +20255,30 @@
 	  // show the next phrase
 
 	  _createClass(List, [{
-	    key: 'handleKeyDown',
-	    value: function handleKeyDown(e) {
-	      if (e.keyCode === ENTER_KEYCODE) {
-	        var inputValue = _utils2.default.clean(e.target.value);
-	        var correctAnswer = this.props.data[this.state.curIndex].translation;
+	    key: '_handleSubmit',
+	    value: function _handleSubmit(e) {
+	      e.preventDefault();
 
-	        // store the user's input
+	      var input = this.refs.answerInput;
+	      var inputValue = _utils2.default.clean(input.value);
+	      var correctAnswer = this.props.data[this.state.curIndex].translation;
+
+	      // store the user's input
+	      if (inputValue) {
+	        // Check for exact match
+	        var isCorrect = inputValue === correctAnswer ? true : false;
+
+	        // Check for dropped pronoun
+	        if (!isCorrect) {
+	          correctAnswer = correctAnswer.split(' ').slice(1).join(' ');
+	          isCorrect = inputValue === correctAnswer ? true : false;
+	        }
+
+	        // save values
 	        this.setState({
 	          answers: this.state.answers.concat([{
 	            inputValue: inputValue,
-	            isCorrect: inputValue === correctAnswer ? true : false
+	            isCorrect: isCorrect
 	          }])
 	        });
 
@@ -20312,7 +20289,7 @@
 	          });
 
 	          // clear input field
-	          e.target.value = '';
+	          input.value = '';
 	        }
 	      }
 	    }
@@ -20396,8 +20373,8 @@
 	          _react2.default.createElement('div', { className: 'progress-bar', style: progressStyles })
 	        ),
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'quiz' },
+	          'form',
+	          { className: 'quiz', onSubmit: this._handleSubmit.bind(this) },
 	          _react2.default.createElement(
 	            'span',
 	            { className: 'quiz-number' },
@@ -20410,9 +20387,13 @@
 	            '.'
 	          ),
 	          _react2.default.createElement('input', {
-	            type: 'text',
 	            className: 'quiz-input',
-	            onKeyDown: this.handleKeyDown.bind(this) })
+	            ref: 'answerInput',
+	            type: 'text' }),
+	          _react2.default.createElement('input', {
+	            className: 'btn quiz-btn',
+	            type: 'submit',
+	            value: this.state.curIndex === this.props.data.length - 1 ? 'Done' : 'Next' })
 	        )
 	      );
 	    }
@@ -20428,7 +20409,7 @@
 	};
 
 /***/ },
-/* 169 */
+/* 168 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20471,7 +20452,7 @@
 	exports.default = utils;
 
 /***/ },
-/* 170 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20487,7 +20468,7 @@
 	  return _p.getPhrases(obj);
 	};
 
-	var _utils = __webpack_require__(169);
+	var _utils = __webpack_require__(168);
 
 	var _utils2 = _interopRequireDefault(_utils);
 
@@ -20555,7 +20536,7 @@
 	};
 
 /***/ },
-/* 171 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20585,7 +20566,7 @@
 	exports.default = Footer;
 
 /***/ },
-/* 172 */
+/* 171 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -20711,11 +20692,11 @@
 			{
 				"en": "want(s)",
 				"es": {
-					"I": "queiro",
-					"you (formal)": "queire",
-					"you (informal)": "queires",
-					"he": "queire",
-					"she": "queire"
+					"I": "quiero",
+					"you (formal)": "quiere",
+					"you (informal)": "quieres",
+					"he": "quiere",
+					"she": "quiere"
 				}
 			},
 			{
