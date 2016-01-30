@@ -471,7 +471,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  font: 1em/1.3 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #222; }\n\nh1, h2, h3, h4, p, ul, ol {\n  margin: 0 0 1em; }\n\nh1 {\n  margin: 0;\n  font-size: 1.5em;\n  line-height: 1;\n  font-weight: normal; }\n\nul, ol {\n  padding: 0 0 0 1.5em;\n  list-style: none; }\n\np {\n  padding: 0 0 0 .5em; }\n\n.btn {\n  padding: 0 1.25em;\n  height: 2.5em;\n  line-height: 2;\n  color: #fff;\n  background: #3583a6;\n  border: none;\n  border-radius: .5em; }\n\n.main-container {\n  margin: 0 auto;\n  width: 96%;\n  max-width: 660px; }\n\n.main-header {\n  padding: 2em 1em 1.5em;\n  color: #fff;\n  background: #222; }\n\n.main-content {\n  padding: 1em; }\n\n.main-footer {\n  padding: 1em 1.5em;\n  border-top: 1px solid #222; }\n\n.instructions-count {\n  margin: 0 0.5em;\n  padding: 0.25em 0;\n  width: 3em;\n  text-align: center;\n  border: 2px solid #3583a6; }\n\n.quiz {\n  background: #a1d5ec;\n  position: relative;\n  padding: 2em 3em 3em; }\n  .quiz-number {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 2em;\n    width: 2em;\n    font-size: 80%;\n    line-height: 2;\n    text-align: center;\n    border: 1px solid #3583a6;\n    border-top: none;\n    border-left: none; }\n  .quiz-text {\n    margin: 0 0 1em;\n    display: block;\n    font-size: 1.2em; }\n  .quiz-input {\n    display: block;\n    margin: 0 0 1em;\n    height: 2em;\n    width: 100%;\n    padding: .5em;\n    font-size: 1.25em;\n    border: 2px solid #858585; }\n  .quiz-score {\n    font-size: 1.2em; }\n\n.progress-container {\n  height: .25em;\n  background: #a1a1a1; }\n\n.progress-bar {\n  height: 100%;\n  background: #e77;\n  transition: all .3s ease-out; }\n\n.answer-list {\n  padding: 0; }\n\n.answer-item {\n  margin: 0 0 .25em;\n  padding: 1.5em 2em 2em;\n  border-top: .25em solid #fff; }\n\n.answer-line {\n  margin: .25em;\n  display: block; }\n\n.correct {\n  background: #8ef1b7;\n  border-top-color: #26A65B; }\n\n.incorrect {\n  background: #fad1d0;\n  border-top-color: #D64541; }\n", ""]);
+	exports.push([module.id, "body {\n  font: 1em/1.3 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #222; }\n\nh1, h2, h3, h4, p, ul, ol {\n  margin: 0 0 1em; }\n\nh1 {\n  margin: 0;\n  font-size: 1.5em;\n  line-height: 1;\n  font-weight: normal; }\n\nul, ol {\n  padding: 0 0 0 1.5em;\n  list-style: none; }\n\np {\n  padding: 0 0 0 .5em; }\n\n.btn {\n  padding: 0 1em;\n  line-height: 2;\n  color: #fff;\n  background: #3583a6;\n  border: none;\n  border-radius: .5em; }\n\n.main-container {\n  margin: 0 auto;\n  width: 96%;\n  max-width: 660px; }\n\n.main-header {\n  padding: 2em 1em 1.5em;\n  color: #fff;\n  background: #222; }\n\n.main-content {\n  padding: 1em; }\n\n.main-footer {\n  padding: 1em 1.5em;\n  border-top: 1px solid #222; }\n\n.instructions-count {\n  margin: 0 0.5em;\n  padding: 0.25em 0;\n  width: 3em;\n  text-align: center;\n  border: 2px solid #3583a6; }\n\n.quiz {\n  background: #a1d5ec;\n  position: relative;\n  padding: 2em 3em 3em; }\n  .quiz-number {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 2em;\n    width: 2em;\n    font-size: 80%;\n    line-height: 2;\n    text-align: center;\n    border: 1px solid #3583a6;\n    border-top: none;\n    border-left: none; }\n  .quiz-text {\n    margin: 0 0 1em;\n    display: block;\n    font-size: 1.2em; }\n  .quiz-input {\n    display: block;\n    margin: 0 0 1em;\n    height: 2em;\n    width: 100%;\n    padding: .5em;\n    font-size: 1.25em;\n    border: 2px solid #858585; }\n  .quiz-score {\n    font-size: 1.2em; }\n\n.progress-container {\n  height: .25em;\n  background: #a1a1a1; }\n\n.progress-bar {\n  height: 100%;\n  background: #e77;\n  transition: all .3s ease-out; }\n\n.answer-list {\n  padding: 0; }\n\n.answer-item {\n  margin: 0 0 .25em;\n  padding: 1.5em 2em 2em;\n  border-top: .25em solid #fff; }\n\n.answer-line {\n  margin: .25em;\n  display: block; }\n\n.correct {\n  background: #8ef1b7;\n  border-top-color: #26A65B; }\n\n.incorrect {\n  background: #fad1d0;\n  border-top-color: #D64541; }\n", ""]);
 
 	// exports
 
@@ -20133,8 +20133,6 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var DEFAULT_COUNT = 10;
-
 	var Main = function (_Component) {
 	  _inherits(Main, _Component);
 
@@ -20144,14 +20142,23 @@
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Main).call(this));
 
 	    _this.state = {
-	      count: DEFAULT_COUNT,
-	      lang: 'es',
-	      quizStarted: false
+	      count: '10', // default number of questions
+	      lang: 'es', // default language
+	      quizStarted: false // check for toggling UI elements
 	    };
+	    // bind our custom methods
+	    _this._handleNewQuiz = _this._handleNewQuiz.bind(_this);
 	    return _this;
 	  }
 
+	  // start a new quiz by simply toggling the view
+
 	  _createClass(Main, [{
+	    key: '_handleNewQuiz',
+	    value: function _handleNewQuiz() {
+	      this.setState({ quizStarted: false });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var _this2 = this;
@@ -20171,20 +20178,23 @@
 	            ' '
 	          ) : _react2.default.createElement('input', {
 	            className: 'instructions-count',
+	            min: '1',
 	            onChange: function onChange(e) {
-	              return _this2.setState({
-	                count: Math.floor(Number(e.target.value)) || DEFAULT_COUNT
-	              });
+	              return _this2.setState({ count: e.target.value });
 	            },
+	            step: '1',
 	            type: 'number',
 	            value: this.state.count }),
 	          'phrases from English to Spanish. Do not use character accents. Dropped pronouns are optional.'
 	        ),
-	        this.state.quizStarted ? _react2.default.createElement(_List2.default, { data: (0, _phrases2.default)({
+	        this.state.quizStarted ? _react2.default.createElement(_List2.default, {
+	          data: (0, _phrases2.default)({
 	            lang: this.state.lang,
-	            count: this.state.count,
+	            count: Math.floor(Number(this.state.count)),
 	            src: this.props.src
-	          }) }) : _react2.default.createElement(
+	          }),
+	          onNewQuiz: this._handleNewQuiz
+	        }) : _react2.default.createElement(
 	          'button',
 	          {
 	            className: 'btn',
@@ -20354,7 +20364,15 @@
 	            getNumCorrect(),
 	            ' out of ',
 	            dataLen,
-	            ').'
+	            '). ',
+	            _react2.default.createElement(
+	              'button',
+	              {
+	                className: 'btn',
+	                onClick: this.props.onNewQuiz,
+	                type: 'button' },
+	              'New Quiz'
+	            )
 	          ),
 	          _react2.default.createElement(
 	            'ol',
