@@ -88,8 +88,13 @@ export default class List extends Component {
       return (
         <div>
           <p className="quiz-score">
-            You scored {percentage}%
-             ({getNumCorrect()} out of {dataLen}).
+            You scored {percentage}% ({getNumCorrect()} out of {dataLen}).&nbsp;
+            <button
+              className="btn"
+              onClick={this.props.onNewQuiz}
+              type="button">
+              New Quiz
+            </button>
           </p>
           <ol className="answer-list">
             {answerNodes}

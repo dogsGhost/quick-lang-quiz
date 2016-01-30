@@ -2,16 +2,21 @@ import React, {Component} from 'react';
 import List from './List';
 import getPhrases from './../phrases';
 
-const DEFAULT_COUNT = 10;
-
 export default class Main extends Component {
   constructor() {
     super();
     this.state = {
-      count: DEFAULT_COUNT,
-      lang: 'es',
-      quizStarted: false
+      count: '10', // default number of questions
+      lang: 'es', // default language
+      quizStarted: false // check for toggling UI elements
     };
+    // bind our custom methods
+    this._handleNewQuiz = this._handleNewQuiz.bind(this);
+  }
+
+  // start a new quiz by simply toggling the view
+  _handleNewQuiz() {
+    this.setState({quizStarted: false });
   }
 
   render() {
@@ -23,10 +28,10 @@ export default class Main extends Component {
             this.state.quizStarted ?
               <span> {this.state.count} </span> :
                <input
-               className="instructions-count"
-                onChange={(e) => this.setState({
-                  count: Math.floor(Number(e.target.value)) || DEFAULT_COUNT
-                })}
+                className="instructions-count"
+                min="1"
+                onChange={(e) => this.setState({ count: e.target.value })}
+                step="1"
                 type="number"
                 value={this.state.count} />
           }
@@ -36,11 +41,14 @@ export default class Main extends Component {
         </p>
         {
           this.state.quizStarted ?
-            <List data={getPhrases({
-              lang: this.state.lang,
-              count: this.state.count,
-              src: this.props.src
-            })} /> :
+            <List
+              data={getPhrases({
+                lang: this.state.lang,
+                count: Math.floor(Number(this.state.count)),
+                src: this.props.src
+              })}
+              onNewQuiz={this._handleNewQuiz}
+            /> :
             <button
               className="btn"
               onClick={() => this.setState({ quizStarted: true })}
